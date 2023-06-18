@@ -16,9 +16,11 @@ public class e2e {
 		driver.findElement(By.xpath("//a[@value='BLR']")).click(); // From destination
 		Thread.sleep(2000);
 		
+		//Select Destination City 
 		driver.findElement(By.xpath("//div[@id='ctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='DEL']")).click();
 		Thread.sleep(2000);
 		
+		//Select currency from dropdown
 		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-hover")).click();
 		driver.findElement(By.cssSelector("input[id='ctl00_mainContent_chk_friendsandfamily']")).click();
 		Select dropdown=new Select(driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
@@ -49,6 +51,8 @@ public class e2e {
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//input[@id='ctl00_mainContent_btn_FindFlights']")).click();
+		
+		System.our.println("Flight search started");
 		driver.close();
 
 	}
